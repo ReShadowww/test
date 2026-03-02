@@ -1,7 +1,7 @@
 services:
-  mariadb:
+  mysql:
     image: mysql:lts
-    container_name: mariadb-test
+    container_name: mysql-test
     environment:
       MYSQL_ROOT_PASSWORD: rootpassword
       MYSQL_DATABASE: sampledb
