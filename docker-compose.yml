@@ -1,0 +1,13 @@
+services:
+  mariadb:
+    image: mysql:lts
+    container_name: mariadb-test
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: sampledb
+      MYSQL_USER: testuser
+      MYSQL_PASSWORD: testpassword
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./init/init.sql:/docker-entrypoint-initdb.d/init.sql
